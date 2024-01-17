@@ -1,0 +1,48 @@
+.wrapper {
+  height: 70.4px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  position: absolute;
+  width: 100%;
+  padding: 16px 0;
+  z-index: 1;
+}
+
+.homePage {
+  text-decoration: none;
+  font-size: 19.6px;
+  font-weight: 700;
+  color: #000;
+}
+
+.nav {
+  display: flex;
+  width: 361.4px;
+  list-style: none;
+  font-size: 12.8px;
+  justify-content: space-between;
+}
+
+.navItem {
+}
+
+.navLink {
+  text-decoration: none;
+  color: #000;
+}
+
+.tools {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+}
+
+.units {
+  padding: 1px 3px;
+}
+
+.cart {
+  padding: 0 4px;
+}
