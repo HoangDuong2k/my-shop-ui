@@ -11,10 +11,8 @@
 }
 
 .homePage {
-  text-decoration: none;
   font-size: 19.6px;
   font-weight: 700;
-  color: #000;
 }
 
 .nav {
@@ -29,20 +27,43 @@
 }
 
 .navLink {
-  text-decoration: none;
-  color: #000;
+}
+
+.navLink:hover {
+  color: #f06161;
+  transition: all ease-in-out 0.3s;
 }
 
 .tools {
   display: flex;
   justify-content: space-between;
   font-size: 24px;
+  cursor: pointer;
+  position: relative;
 }
 
-.units {
+.selectUnits {
   padding: 1px 3px;
 }
 
+.unitsList {
+  position: absolute;
+  width: 98px;
+  background-color: #000;
+  color: #fff;
+  top: 54px;
+  left: -28px;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 600;
+  /* display: none; */
+}
+
+.unit {
+  height: 62.4px;
+  line-height: 62.4px;
+}
+
 .cart {
-  padding: 0 4px;
+  padding: 4px 4px 0;
 }

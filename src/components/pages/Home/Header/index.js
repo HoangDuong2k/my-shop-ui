@@ -1,5 +1,4 @@
 import styles from "./header.module.css";
-import { IoLogoUsd } from "react-icons/io";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { BsCart3 } from "react-icons/bs";
 
@@ -42,9 +41,17 @@ function Header() {
         </li>
       </ul>
       <div className={styles.tools}>
-        <div className={styles.units}>
-          <IoLogoUsd />
+        <div className={styles.selectUnits}>
+          $
           <MdKeyboardArrowDown />
+        </div>
+        <div className={styles.unitsList}>
+          <div className={styles.unit}>$ USD</div>
+          <div className={styles.unit}>€ EUR</div>
+          <div className={styles.unit}>£ GBP</div>
+          <div className={styles.unit}>A$ AUD</div>
+          <div className={styles.unit}>¥ JPY</div>
+          <div className={styles.unit}>₽ RUB</div>
         </div>
         <div className={styles.cart}>
           <BsCart3 />

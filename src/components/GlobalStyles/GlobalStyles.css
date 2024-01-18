@@ -22,3 +22,8 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
+
+a {
+  color: #000;
+  text-decoration: none;
+}
