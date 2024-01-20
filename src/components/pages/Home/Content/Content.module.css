@@ -41,6 +41,7 @@
 }
 
 .itemBtn {
+  justify-content: space-around;
   letter-spacing: 1px;
   position: absolute;
   width: 130px;
@@ -52,6 +53,37 @@
     7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
+  transition: all ease-in-out 0.5s;
+}
+
+.btnTitle {
+  transition: all ease-in-out 0.5s;
+}
+
+.btnArrow {
+  position: absolute;
+  transform: translateY(2px);
+  color: rgba(255, 255, 255, 0);
+  top: 0;
+  right: 0;
+  transition: all ease-in-out 0.5s;
+}
+
+.itemBtn:hover {
+  background-color: #ccc;
+  transition: all ease-in-out 0.5s;
+}
+
+.itemBtn:hover .btnTitle {
+  transform: translateX(-16px);
+  transition: all ease-in-out 0.5s;
+}
+
+.itemBtn:hover .btnArrow {
+  color: #000;
+  display: block;
+  right: 16px;
+  transition: all ease-in-out 0.5s;
 }
 
 .item1 .itemBtn {

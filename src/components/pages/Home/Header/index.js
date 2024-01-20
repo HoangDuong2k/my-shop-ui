@@ -1,8 +1,31 @@
 import styles from "./header.module.css";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { BsCart3 } from "react-icons/bs";
+import Units from "./Units";
+import Cart from "./Cart";
+import { useRef, useEffect, useState } from "react";
 
 function Header() {
+  const navList = ["all", "dresses", "blouses", "jeans", "shoes"];
+
+  const [isOpenUnitSelector, setIsOpenUnitSelector] = useState(false);
+  const [isOpenCartStatus, setIsOpenCartStatus] = useState(false);
+
+  const unitSelectorRef = useRef();
+  const cartRef = useRef();
+
+  useEffect(() => {
+    const handleClick = (e) => {
+      if (!unitSelectorRef.current.contains(e.target))
+        setIsOpenUnitSelector(false);
+      if (!cartRef.current.contains(e.target)) setIsOpenCartStatus(false);
+    };
+    window.addEventListener("click", handleClick);
+    return () => {
+      window.removeEventListener("click", handleClick);
+    };
+  }, []);
+
   return (
     <header className={styles.wrapper}>
       <a href="/" className={styles.homePage}>
@@ -14,47 +37,34 @@ function Header() {
             HOME
           </a>
         </li>
-        <li className={styles.navItem}>
-          <a href="/" className={styles.navLink}>
-            ALL
-          </a>
-        </li>
-        <li className={styles.navItem}>
-          <a href="/" className={styles.navLink}>
-            DRESSES
-          </a>
-        </li>
-        <li className={styles.navItem}>
-          <a href="/" className={styles.navLink}>
-            BLOUSES
-          </a>
-        </li>
-        <li className={styles.navItem}>
-          <a href="/" className={styles.navLink}>
-            JEANS
-          </a>
-        </li>
-        <li className={styles.navItem}>
-          <a href="/" className={styles.navLink}>
-            SHOES
-          </a>
-        </li>
+        {navList.map((nav, index) => (
+          <li key={index} className={styles.navItem}>
+            <a href="/@{nav}" className={styles.navLink}>
+              {nav}
+            </a>
+          </li>
+        ))}
       </ul>
       <div className={styles.tools}>
-        <div className={styles.selectUnits}>
+        <div
+          className={styles.selectUnits}
+          onClick={() => setIsOpenUnitSelector(!isOpenUnitSelector)}
+          ref={unitSelectorRef}
+        >
           $
-          <MdKeyboardArrowDown />
+          <span className={isOpenUnitSelector ? styles.arrowUp : ""}>
+            <MdKeyboardArrowDown />
+          </span>
         </div>
-        <div className={styles.unitsList}>
-          <div className={styles.unit}>$ USD</div>
-          <div className={styles.unit}>€ EUR</div>
-          <div className={styles.unit}>£ GBP</div>
-          <div className={styles.unit}>A$ AUD</div>
-          <div className={styles.unit}>¥ JPY</div>
-          <div className={styles.unit}>₽ RUB</div>
-        </div>
-        <div className={styles.cart}>
-          <BsCart3 />
+        {isOpenUnitSelector && <Units />}
+        <div className={styles.cart} ref={cartRef}>
+          <div
+            className={styles.cartIcon}
+            onClick={() => setIsOpenCartStatus(!isOpenCartStatus)}
+          >
+            <BsCart3 />
+          </div>
+          {isOpenCartStatus && <Cart />}
         </div>
       </div>
     </header>
