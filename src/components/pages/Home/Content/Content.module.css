@@ -40,6 +40,14 @@
   position: relative;
 }
 
+.item1:hover,
+.item2:hover,
+.item3:hover,
+.item4:hover,
+.item5:hover {
+  opacity: 0.8;
+}
+
 .itemBtn {
   justify-content: space-around;
   letter-spacing: 1px;
@@ -75,14 +83,14 @@
 }
 
 .itemBtn:hover .btnTitle {
-  transform: translateX(-16px);
+  transform: translateX(-12px);
   transition: all ease-in-out 0.5s;
 }
 
 .itemBtn:hover .btnArrow {
   color: #000;
   display: block;
-  right: 16px;
+  right: 12px;
   transition: all ease-in-out 0.5s;
 }
 

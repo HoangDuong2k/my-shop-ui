@@ -68,3 +68,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Update
+
+17-01-2024: Init Project, build homepage banner
+18-01-2024: Build homepage content
+19-01-2024: Update homepage
+20-01-2024: Add function to open/close tool box, style button hover
+22-01-2024: Add multi language using i18next

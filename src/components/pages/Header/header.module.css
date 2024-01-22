@@ -17,7 +17,7 @@
 
 .nav {
   display: flex;
-  width: 361.4px;
+  width: 400px;
   list-style: none;
   font-size: 12.8px;
   justify-content: space-between;
@@ -43,7 +43,7 @@
   position: relative;
 }
 
-.selectUnits {
+.unitSelector {
   padding: 1px 3px;
 }
 
@@ -72,6 +72,10 @@
   background-color: #000;
 }
 
+.cart {
+  padding: 0 4px;
+}
+
 .cartIcon {
   padding: 4px 4px 0;
 }
@@ -96,4 +100,26 @@
   font-weight: 700;
   padding: 16px;
   margin-bottom: 20px;
+}
+
+.currentLang {
+  width: 40px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.langList {
+  position: absolute;
+  top: 55px;
+  right: -8px;
+}
+
+.lang {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 8px 16px;
+}
+
+.lang:hover {
+  background-color: #000;
 }

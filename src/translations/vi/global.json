@@ -1,0 +1,29 @@
+{
+  "header": {
+    "home": "Trang chủ",
+    "nav": {
+      "item1": "Tất cả",
+      "item2": "Váy đầm",
+      "item3": "Sơ mi",
+      "item4": "Quần Jeans",
+      "item5": "Giày"
+    },
+    "cart": {
+      "status": "Giỏ hàng: 0 vật phẩm",
+      "description": "Có vẻ như bạn chưa thêm bất cứ thứ gì vào giỏ hàng của mình"
+    }
+  },
+  "home": {
+    "banner": {
+      "title": "Hãy tạo nên phiên bản tốt hơn của ",
+      "span": "bạn!"
+    },
+    "content": {
+      "item1": "Sơ mi",
+      "item2": "Quần Jeans",
+      "item3": "Giày",
+      "item4": "Váy đầm",
+      "item5": "Tất cả"
+    }
+  }
+}

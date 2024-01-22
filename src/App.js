@@ -1,13 +1,11 @@
-import Header from "./components/pages/Home/Header";
-import Banner from "./components/pages/Home/Banner";
-import Content from "./components/pages/Home/Content";
+import Header from "./components/pages/Header";
+import Home from "./components/pages/Home/Home";
 
 function App() {
   return (
     <div className="App">
       <Header />
-      <Banner />
-      <Content />
+      <Home />
     </div>
   );
 }
