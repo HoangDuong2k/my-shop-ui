@@ -1,52 +1,26 @@
-import styles from "./Content.module.css";
+import "./Content.css";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 function Content() {
+  const contentItems = ["cosmetics", "houseware", "ginseng", "all"];
   const { t } = useTranslation();
 
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.item1}>
-        <a href="/" className={styles.itemBtn}>
-          <p className={styles.btnTitle}>{t("home.content.item1")}</p>
-          <div className={styles.btnArrow}>
-            <FaArrowAltCircleRight />
-          </div>
-        </a>
-      </div>
-      <div className={styles.item2}>
-        <a href="/" className={styles.itemBtn}>
-          <p className={styles.btnTitle}>{t("home.content.item2")}</p>
-          <div className={styles.btnArrow}>
-            <FaArrowAltCircleRight />
-          </div>
-        </a>
-      </div>
-      <div className={styles.item3}>
-        <a href="/" className={styles.itemBtn}>
-          <p className={styles.btnTitle}>{t("home.content.item3")}</p>
-          <div className={styles.btnArrow}>
-            <FaArrowAltCircleRight />
-          </div>
-        </a>
-      </div>
-      <div className={styles.item4}>
-        <a href="/" className={styles.itemBtn}>
-          <p className={styles.btnTitle}>{t("home.content.item4")}</p>
-          <div className={styles.btnArrow}>
-            <FaArrowAltCircleRight />
-          </div>
-        </a>
-      </div>
-      <div className={styles.item5}>
-        <a href="/" className={styles.itemBtn}>
-          <p className={styles.btnTitle}>{t("home.content.item5")}</p>
-          <div className={styles.btnArrow}>
-            <FaArrowAltCircleRight />
-          </div>
-        </a>
-      </div>
+    <div className="homeContentWrapper">
+      {contentItems.map((item, index) => (
+        <div key={index} className={"homeContent" + String(index + 1)}>
+          <Link to={"/" + item} className="homeItemBtn">
+            <p className="homeBtnTitle">
+              {t("home.content.item" + String(index + 1))}
+            </p>
+            <div className="homeBtnArrow">
+              <FaArrowAltCircleRight />
+            </div>
+          </Link>
+        </div>
+      ))}
     </div>
   );
 }

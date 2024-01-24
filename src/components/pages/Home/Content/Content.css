@@ -1,58 +1,53 @@
-.wrapper {
+.homeContentWrapper {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(3, 560px);
   gap: 5px 5px;
 }
 
-.item1 {
+.homeContent1 {
   grid-column: 1 / 4;
-  background: url(../../../../assets/images/gridOne.jpeg) no-repeat center;
+  background: url(../../../../assets/images/cosmetics.webp) no-repeat center;
   background-size: cover;
   position: relative;
+  height: 560px;
 }
 
-.item2 {
+.homeContent2 {
   grid-column: 4 / 6;
-  background: url(../../../../assets/images/gridTwo.jpeg) no-repeat center;
+  background: url(../../../../assets/images/houseware.jpg) no-repeat center;
   background-size: cover;
   position: relative;
+  height: 560px;
 }
 
-.item3 {
+.homeContent3 {
   grid-column: 1 / 3;
-  background: url(../../../../assets/images/gridThree.jpeg) no-repeat center;
+  background: url(../../../../assets/images/ginseng.webp) no-repeat center;
   background-size: cover;
   position: relative;
+  height: 560px;
 }
 
-.item4 {
+.homeContent4 {
   grid-column: 3 / 6;
-  background: url(../../../../assets/images/gridFour.jpeg) no-repeat center;
+  background: url(../../../../assets/images/all.jpg) no-repeat center;
   background-size: cover;
   position: relative;
+  height: 560px;
 }
 
-.item5 {
-  grid-column: 1 / 6;
-  background: url(../../../../assets/images/gridFive.jpeg) no-repeat center;
-  background-size: cover;
-  position: relative;
-}
-
-.item1:hover,
-.item2:hover,
-.item3:hover,
-.item4:hover,
-.item5:hover {
+.homeContent1:hover,
+.homeContent2:hover,
+.homeContent3:hover,
+.homeContent4:hover {
   opacity: 0.8;
 }
 
-.itemBtn {
+.homeItemBtn {
   justify-content: space-around;
   letter-spacing: 1px;
   position: absolute;
-  width: 130px;
+  width: 150px;
   height: 40px;
   line-height: 40px;
   text-align: center;
@@ -61,60 +56,55 @@
     7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
-  transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.3s;
 }
 
-.btnTitle {
-  transition: all ease-in-out 0.5s;
+.homeBtnTitle {
+  transition: all ease-in-out 0.3s;
 }
 
-.btnArrow {
+.homeBtnArrow {
   position: absolute;
   transform: translateY(2px);
   color: rgba(255, 255, 255, 0);
   top: 0;
   right: 0;
-  transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.3s;
 }
 
-.itemBtn:hover {
+.homeItemBtn:hover {
   background-color: #ccc;
-  transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.3s;
 }
 
-.itemBtn:hover .btnTitle {
+.homeItemBtn:hover .homeBtnTitle {
   transform: translateX(-12px);
-  transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.3s;
 }
 
-.itemBtn:hover .btnArrow {
+.homeItemBtn:hover .homeBtnArrow {
   color: #000;
   display: block;
   right: 12px;
-  transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.3s;
 }
 
-.item1 .itemBtn {
+.homeContent1 .homeItemBtn {
   top: 85%;
   left: 10%;
 }
 
-.item2 .itemBtn {
+.homeContent2 .homeItemBtn {
   top: 85%;
   left: 20%;
 }
 
-.item3 .itemBtn {
+.homeContent3 .homeItemBtn {
   top: 85%;
   left: 10%;
 }
 
-.item4 .itemBtn {
+.homeContent4 .homeItemBtn {
   top: 85%;
   left: 70%;
-}
-
-.item5 .itemBtn {
-  top: 10%;
-  left: 80%;
 }

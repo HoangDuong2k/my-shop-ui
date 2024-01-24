@@ -1,5 +1,5 @@
 .wrapper {
-  height: 729.6px;
+  height: 100vh;
 }
 
 .video {
@@ -16,6 +16,7 @@
   left: 60%;
   top: 30%;
   max-width: 430px;
+  text-shadow: 1px 1px 1px #000;
 }
 
 .slogan span {

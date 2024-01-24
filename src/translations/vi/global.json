@@ -3,10 +3,9 @@
     "home": "Trang chủ",
     "nav": {
       "item1": "Tất cả",
-      "item2": "Váy đầm",
-      "item3": "Sơ mi",
-      "item4": "Quần Jeans",
-      "item5": "Giày"
+      "item2": "Mỹ phẩm",
+      "item3": "Gia dụng",
+      "item4": "Nấm, sâm"
     },
     "cart": {
       "status": "Giỏ hàng: 0 vật phẩm",
@@ -19,11 +18,14 @@
       "span": "bạn!"
     },
     "content": {
-      "item1": "Sơ mi",
-      "item2": "Quần Jeans",
-      "item3": "Giày",
-      "item4": "Váy đầm",
-      "item5": "Tất cả"
+      "item1": "Mỹ phẩm",
+      "item2": "Gia dụng",
+      "item3": "Nấm, sâm",
+      "item4": "Tất cả"
     }
+  },
+  "all": {
+    "banner": "Tạo nên phong cách của riêng bạn",
+    "header": "Tất cả sản phẩm"
   }
 }

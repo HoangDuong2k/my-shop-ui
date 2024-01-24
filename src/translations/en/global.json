@@ -3,10 +3,9 @@
     "home": "Home",
     "nav": {
       "item1": "All",
-      "item2": "Dresses",
-      "item3": "Blouses",
-      "item4": "Jeans",
-      "item5": "Shoes"
+      "item2": "Cosmetics",
+      "item3": "Houseware",
+      "item4": "Ginseng"
     },
     "cart": {
       "status": "My cart, 0 items",
@@ -19,11 +18,14 @@
       "span": "you!"
     },
     "content": {
-      "item1": "Blouses",
-      "item2": "Jeans",
-      "item3": "Shoes",
-      "item4": "Dresses",
-      "item5": "Store"
+      "item1": "Cosmetics",
+      "item2": "Houseware",
+      "item3": "Ginseng",
+      "item4": "All"
     }
+  },
+  "all": {
+    "banner": "Let's create your own style",
+    "header": "All products"
   }
 }

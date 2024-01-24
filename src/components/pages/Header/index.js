@@ -6,11 +6,12 @@ import Cart from "./Cart";
 import { useRef, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import Languege from "./Language";
+import { Link } from "react-router-dom";
 
 function Header() {
   const { t, i18n } = useTranslation();
 
-  const navList = ["all", "dresses", "blouses", "jeans", "shoes"];
+  const navList = ["all", "cosmetics", "houseware", "ginseng"];
 
   const [isOpenUnitSelector, setIsOpenUnitSelector] = useState(false);
   const [isOpenCartStatus, setIsOpenCartStatus] = useState(false);
@@ -35,20 +36,20 @@ function Header() {
 
   return (
     <header className={styles.wrapper}>
-      <a href="/" className={styles.homePage}>
+      <Link to="/" className={styles.homePage}>
         Shopping Time
-      </a>
+      </Link>
       <ul className={styles.nav}>
         <li className={styles.navItem}>
-          <a href="/" className={styles.navLink}>
+          <Link to="/" className={styles.navLink}>
             {t("header.home")}
-          </a>
+          </Link>
         </li>
         {navList.map((nav, index) => (
           <li key={index} className={styles.navItem}>
-            <a href="/@{nav}" className={styles.navLink}>
+            <Link to={"/" + nav} className={styles.navLink}>
               {t("header.nav.item" + String(index + 1))}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
