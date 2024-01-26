@@ -81,4 +81,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 22-01-2024: Add multi language using i18next
 
-25-01-2023: Update homepage, create all-products-page
+25-01-2024: Update homepage, create all-products-page
+
+27-01-2024: Create cosmetics page, ginseng page, houseware page

@@ -27,5 +27,17 @@
   "all": {
     "banner": "Let's create your own style",
     "header": "All products"
+  },
+  "cosmetics": {
+    "banner": "Let's create your own style",
+    "header": "Cosmetics"
+  },
+  "houseware": {
+    "banner": "Let's create your own style",
+    "header": "Houseware"
+  },
+  "ginseng": {
+    "banner": "Let's create your own style",
+    "header": "Ginseng"
   }
 }

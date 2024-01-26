@@ -27,5 +27,17 @@
   "all": {
     "banner": "Tạo nên phong cách của riêng bạn",
     "header": "Tất cả sản phẩm"
+  },
+  "cosmetics": {
+    "banner": "Tạo nên phong cách của riêng bạn",
+    "header": "Mỹ phẩm"
+  },
+  "houseware": {
+    "banner": "Tạo nên phong cách của riêng bạn",
+    "header": "Đồ gia dụng"
+  },
+  "ginseng": {
+    "banner": "Tạo nên phong cách của riêng bạn",
+    "header": "Sâm, nấm linh chi"
   }
 }

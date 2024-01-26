@@ -1,7 +1,7 @@
 import styles from "./header.module.css";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { BsCart3 } from "react-icons/bs";
-import Units from "./Units";
+import Currency from "./Currency";
 import Cart from "./Cart";
 import { useRef, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -13,18 +13,18 @@ function Header() {
 
   const navList = ["all", "cosmetics", "houseware", "ginseng"];
 
-  const [isOpenUnitSelector, setIsOpenUnitSelector] = useState(false);
+  const [isOpenCurrencySelector, setIsOpenCurrencySelector] = useState(false);
   const [isOpenCartStatus, setIsOpenCartStatus] = useState(false);
   const [isOpenLangSelector, setIsOpenLangSelector] = useState(false);
 
-  const unitSelectorRef = useRef();
+  const currencySelectorRef = useRef();
   const cartRef = useRef();
   const langRef = useRef();
 
   useEffect(() => {
     const handleClick = (e) => {
-      if (!unitSelectorRef.current.contains(e.target))
-        setIsOpenUnitSelector(false);
+      if (!currencySelectorRef.current.contains(e.target))
+        setIsOpenCurrencySelector(false);
       if (!cartRef.current.contains(e.target)) setIsOpenCartStatus(false);
       if (!langRef.current.contains(e.target)) setIsOpenLangSelector(false);
     };
@@ -55,16 +55,17 @@ function Header() {
       </ul>
       <div className={styles.tools}>
         <div
-          className={styles.unitSelector}
-          onClick={() => setIsOpenUnitSelector(!isOpenUnitSelector)}
-          ref={unitSelectorRef}
+          className={styles.currencySelector}
+          onClick={() => setIsOpenCurrencySelector(!isOpenCurrencySelector)}
+          ref={currencySelectorRef}
         >
           $
-          <span className={isOpenUnitSelector ? styles.arrowUp : ""}>
+          <span className={isOpenCurrencySelector ? styles.arrowUp : ""}>
             <MdKeyboardArrowDown />
           </span>
         </div>
-        {isOpenUnitSelector && <Units />}
+        {isOpenCurrencySelector && <Currency />}
+
         <div className={styles.cart} ref={cartRef}>
           <div
             className={styles.cartIcon}
