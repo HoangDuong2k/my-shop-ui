@@ -44,7 +44,10 @@
 }
 
 .currencySelector {
+  display: flex;
+  justify-content: flex-end;
   padding: 1px 3px;
+  width: 6rem;
 }
 
 .arrowUp svg {
@@ -83,8 +86,8 @@
 .cartStatusBox {
   position: absolute;
   top: 66px;
-  left: -288px;
-  right: -20px;
+  right: 4rem;
+  width: 42rem;
   font-size: 16px;
   font-weight: 600;
   background-color: rgba(0, 0, 0, 0.7);
@@ -100,6 +103,15 @@
   font-weight: 700;
   padding: 16px;
   margin-bottom: 20px;
+}
+
+.addedItem {
+  display: flex;
+  justify-content: space-between;
+}
+
+.addedItemImg {
+  width: 40%;
 }
 
 .currentLang {

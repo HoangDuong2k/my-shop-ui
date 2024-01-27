@@ -1,45 +1,17 @@
 import styles from "./Content.module.css";
+import { HOUSEWAREPRODUCTS } from "../../../../products/HousewareProducts";
+import { useContext } from "react";
+import { ShopContext } from "../../../../shop-context";
+import { useTranslation } from "react-i18next";
 
 function Content() {
-  const itemList = [
-    {
-      name: "BL",
-      img: "/items/Houseware/BL-C01FCR.jpg",
-    },
-    {
-      name: "CJE",
-      img: "/items/Houseware/CJE-B0601.jpg",
-    },
-    {
-      name: "CR",
-      img: "/items/Houseware/CR-0655FR.jpg",
-    },
-    {
-      name: "CRH",
-      img: "/items/Houseware/CRH-TWK0670W.jpg",
-    },
-    {
-      name: "CRP",
-      img: "/items/Houseware/CRP-FHS1010FD.jpg",
-    },
-    {
-      name: "CRS",
-      img: "/items/Houseware/CRS-FCWK0670K.jpg",
-    },
-    {
-      name: "H-300L",
-      img: "/items/Houseware/H-300L.jpg",
-    },
-    {
-      name: "H400",
-      img: "/items/Houseware/H400-BFC05MB.jpg",
-    },
-  ];
+  const { currency, addToCart } = useContext(ShopContext);
+  const { t } = useTranslation();
 
   return (
     <div className={styles.wrapper}>
-      {itemList.map((item, index) => (
-        <div key={index} className={styles.item}>
+      {HOUSEWAREPRODUCTS.map((item) => (
+        <div key={item.id} className={styles.item}>
           <div
             className={styles.itemImg}
             style={{
@@ -48,6 +20,16 @@ function Content() {
           ></div>
           <div className={styles.itemInfo}>
             <p className={styles.itemName}>{item.name}</p>
+            <p className={styles.itemPrice}>
+              {currency.symbol}
+              {Math.round(item.price * currency.conversionRate * 100) / 100}
+            </p>
+            <button
+              className={styles.addToCartBtn}
+              onClick={() => addToCart(item.id)}
+            >
+              {t("add to cart")}
+            </button>
           </div>
         </div>
       ))}

@@ -1,45 +1,17 @@
 import styles from "./Content.module.css";
+import { GINSENGPRODUCTS } from "../../../../products/GinsengProducts";
+import { useContext } from "react";
+import { ShopContext } from "../../../../shop-context";
+import { useTranslation } from "react-i18next";
 
 function Content() {
-  const itemList = [
-    {
-      name: "ancungsamsung",
-      img: "/items/Ginseng/ancungsamsung.jpg",
-    },
-    {
-      name: "bogan",
-      img: "/items/Ginseng/bogan.jpg",
-    },
-    {
-      name: "kickergold",
-      img: "/items/Ginseng/kickergold.jpg",
-    },
-    {
-      name: "Lactofit",
-      img: "/items/Ginseng/Lactofit.jpg",
-    },
-    {
-      name: "nam1",
-      img: "/items/Ginseng/nam1.jpg",
-    },
-    {
-      name: "sam1",
-      img: "/items/Ginseng/sam1.jpg",
-    },
-    {
-      name: "samkho",
-      img: "/items/Ginseng/samkho.jpg",
-    },
-    {
-      name: "thachhongsam",
-      img: "/items/Ginseng/thachhongsam.jpg",
-    },
-  ];
+  const { currency, addToCart } = useContext(ShopContext);
+  const { t } = useTranslation();
 
   return (
     <div className={styles.wrapper}>
-      {itemList.map((item, index) => (
-        <div key={index} className={styles.item}>
+      {GINSENGPRODUCTS.map((item) => (
+        <div key={item.id} className={styles.item}>
           <div
             className={styles.itemImg}
             style={{
@@ -48,6 +20,16 @@ function Content() {
           ></div>
           <div className={styles.itemInfo}>
             <p className={styles.itemName}>{item.name}</p>
+            <p className={styles.itemPrice}>
+              {currency.symbol}
+              {Math.round(item.price * currency.conversionRate * 100) / 100}
+            </p>
+            <button
+              className={styles.addToCartBtn}
+              onClick={() => addToCart(item.id)}
+            >
+              {t("add to cart")}
+            </button>
           </div>
         </div>
       ))}

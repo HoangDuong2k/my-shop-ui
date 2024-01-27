@@ -8,7 +8,7 @@
       "item4": "Nấm, sâm"
     },
     "cart": {
-      "status": "Giỏ hàng: 0 vật phẩm",
+      "status": "Giỏ hàng: ",
       "description": "Có vẻ như bạn chưa thêm bất cứ thứ gì vào giỏ hàng của mình"
     }
   },
@@ -39,5 +39,6 @@
   "ginseng": {
     "banner": "Tạo nên phong cách của riêng bạn",
     "header": "Sâm, nấm linh chi"
-  }
+  },
+  "add to cart": "Thêm vào giỏ hàng"
 }

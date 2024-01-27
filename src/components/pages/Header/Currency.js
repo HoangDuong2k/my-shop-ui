@@ -1,14 +1,22 @@
 import styles from "./header.module.css";
+import { CURRENCYLIST } from "../../../assets/images/CurrencyList";
+import { useContext } from "react";
+import { ShopContext } from "../../../shop-context";
 
 function Currency() {
+  const { setCurrency } = useContext(ShopContext);
+
   return (
     <div className={styles.currencyList}>
-      <div className={styles.currency}>$ USD</div>
-      <div className={styles.currency}>€ EUR</div>
-      <div className={styles.currency}>£ GBP</div>
-      <div className={styles.currency}>A$ AUD</div>
-      <div className={styles.currency}>¥ JPY</div>
-      <div className={styles.currency}>₽ RUB</div>
+      {CURRENCYLIST.map((item) => (
+        <div
+          key={item.name}
+          className={styles.currency}
+          onClick={() => setCurrency(item)}
+        >
+          {item.symbol} {item.name}
+        </div>
+      ))}
     </div>
   );
 }

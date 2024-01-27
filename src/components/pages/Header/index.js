@@ -7,9 +7,12 @@ import { useRef, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import Languege from "./Language";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { ShopContext } from "../../../shop-context";
 
 function Header() {
   const { t, i18n } = useTranslation();
+  const { currency } = useContext(ShopContext);
 
   const navList = ["all", "cosmetics", "houseware", "ginseng"];
 
@@ -59,7 +62,7 @@ function Header() {
           onClick={() => setIsOpenCurrencySelector(!isOpenCurrencySelector)}
           ref={currencySelectorRef}
         >
-          $
+          {currency.symbol}
           <span className={isOpenCurrencySelector ? styles.arrowUp : ""}>
             <MdKeyboardArrowDown />
           </span>

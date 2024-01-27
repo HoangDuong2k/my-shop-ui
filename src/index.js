@@ -5,13 +5,16 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import GlobalStyles from "./components/GlobalStyles";
 import "./i18n";
+import { ShopProvider } from "./shop-context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <GlobalStyles>
-        <App />
+        <ShopProvider>
+          <App />
+        </ShopProvider>
       </GlobalStyles>
     </BrowserRouter>
   </React.StrictMode>
