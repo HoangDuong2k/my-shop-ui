@@ -12,7 +12,7 @@ import { ShopContext } from "../../../shop-context";
 
 function Header() {
   const { t, i18n } = useTranslation();
-  const { currency } = useContext(ShopContext);
+  const { currency, numberItems } = useContext(ShopContext);
 
   const navList = ["all", "cosmetics", "houseware", "ginseng"];
 
@@ -76,6 +76,9 @@ function Header() {
           >
             <BsCart3 />
           </div>
+          {numberItems() > 0 && (
+            <div className={styles.numberItemInCard}>{numberItems()}</div>
+          )}
           {isOpenCartStatus && <Cart />}
         </div>
         <div className={styles.langSelector}>

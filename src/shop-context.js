@@ -19,6 +19,24 @@ function ShopProvider(props) {
     conversionRate: 1,
   });
 
+  const numberItems = () => {
+    let numberItems = 0;
+
+    for (let i = 1; i < PRODUCTS.length; i++) {
+      numberItems += cartItems[i];
+    }
+    return numberItems;
+  };
+
+  const totalPrice = () => {
+    let totalPrice = 0;
+
+    for (let i = 1; i < PRODUCTS.length; i++) {
+      totalPrice += PRODUCTS[i - 1].price * cartItems[i];
+    }
+    return totalPrice;
+  };
+
   const addToCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
   };
@@ -27,7 +45,17 @@ function ShopProvider(props) {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
   };
 
-  const value = { currency, setCurrency, cartItems, addToCart, removeFromCart };
+  const value = {
+    currency,
+    setCurrency,
+    cartItems,
+    setCartItems,
+    addToCart,
+    removeFromCart,
+    numberItems,
+    totalPrice,
+    getDefaultCart,
+  };
 
   return (
     <ShopContext.Provider value={value}>{props.children}</ShopContext.Provider>
