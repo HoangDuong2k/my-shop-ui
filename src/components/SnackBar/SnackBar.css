@@ -1,0 +1,32 @@
+#showSB {
+  transform: translateX(0);
+  opacity: 1;
+  transition: 0.5s;
+}
+
+#hideSB {
+  transform: translateX(25rem);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.snackBar {
+  display: flex;
+  position: fixed;
+  top: 5%;
+  right: 1rem;
+  background-color: #29b94b;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.snackBarIcon {
+  padding: 0.5rem;
+  transform: translateY(0.2rem);
+}
+
+.snackBarTitle {
+  display: block;
+  padding: 0.5rem;
+}

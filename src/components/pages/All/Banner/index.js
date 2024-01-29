@@ -8,7 +8,6 @@ function Banner() {
   return (
     <div className={styles.wrapper}>
       <img src={bannerImg} className={styles.img} alt="All products" />
-      <h1 className={styles.slogan}>{t("all.banner")}</h1>
       <h1 className={styles.header}>{t("all.header")}</h1>
     </div>
   );

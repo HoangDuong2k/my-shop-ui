@@ -13,10 +13,6 @@
     }
   },
   "home": {
-    "banner": {
-      "title": "Building a better ",
-      "span": "you!"
-    },
     "content": {
       "item1": "Cosmetics",
       "item2": "Houseware",
@@ -25,19 +21,15 @@
     }
   },
   "all": {
-    "banner": "Let's create your own style",
     "header": "All products"
   },
   "cosmetics": {
-    "banner": "Let's create your own style",
     "header": "Cosmetics"
   },
   "houseware": {
-    "banner": "Let's create your own style",
     "header": "Houseware"
   },
   "ginseng": {
-    "banner": "Let's create your own style",
     "header": "Ginseng"
   },
   "add to cart": "Add to cart",

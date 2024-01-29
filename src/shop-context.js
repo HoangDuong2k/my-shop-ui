@@ -6,24 +6,30 @@ const ShopContext = createContext();
 function ShopProvider(props) {
   const getDefaultCart = () => {
     let cart = {};
-    for (let i = 1; i < PRODUCTS.length + 1; i++) {
-      cart[i] = 0;
+    for (let i = 0; i < PRODUCTS.length; i++) {
+      cart[PRODUCTS[i].id] = 0;
     }
     return cart;
   };
 
   const [cartItems, setCartItems] = useState(getDefaultCart());
   const [currency, setCurrency] = useState({
+    local: "en-US",
     name: "USD",
     symbol: "$",
     conversionRate: 1,
   });
+  const currencyFormat = new Intl.NumberFormat(currency.local, {
+    style: "currency",
+    currency: currency.name,
+  });
+  const [showSnackBar, setShowSnackBar] = useState(false);
 
   const numberItems = () => {
     let numberItems = 0;
 
-    for (let i = 1; i < PRODUCTS.length; i++) {
-      numberItems += cartItems[i];
+    for (let i = 0; i < PRODUCTS.length; i++) {
+      numberItems += cartItems[PRODUCTS[i].id];
     }
     return numberItems;
   };
@@ -31,8 +37,8 @@ function ShopProvider(props) {
   const totalPrice = () => {
     let totalPrice = 0;
 
-    for (let i = 1; i < PRODUCTS.length; i++) {
-      totalPrice += PRODUCTS[i - 1].price * cartItems[i];
+    for (let i = 0; i < PRODUCTS.length; i++) {
+      totalPrice += PRODUCTS[i].price * cartItems[PRODUCTS[i].id];
     }
     return totalPrice;
   };
@@ -48,6 +54,7 @@ function ShopProvider(props) {
   const value = {
     currency,
     setCurrency,
+    currencyFormat,
     cartItems,
     setCartItems,
     addToCart,
@@ -55,6 +62,8 @@ function ShopProvider(props) {
     numberItems,
     totalPrice,
     getDefaultCart,
+    showSnackBar,
+    setShowSnackBar,
   };
 
   return (

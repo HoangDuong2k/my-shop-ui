@@ -176,6 +176,11 @@
   cursor: pointer;
 }
 
+.quantityBtn:hover {
+  background-color: #f06161;
+  color: #fff;
+}
+
 .cartDesc {
   padding-top: 16px;
   padding-left: 8px;

@@ -1,5 +1,5 @@
 import styles from "./header.module.css";
-import { CURRENCYLIST } from "../../../assets/images/CurrencyList";
+import { CURRENCYLIST } from "../../../CurrencyList";
 import { useContext } from "react";
 import { ShopContext } from "../../../shop-context";
 

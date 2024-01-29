@@ -8,6 +8,7 @@ function Cart() {
   const { t } = useTranslation();
   const {
     currency,
+    currencyFormat,
     cartItems,
     setCartItems,
     addToCart,
@@ -27,9 +28,7 @@ function Cart() {
           <li
             key={index}
             className={
-              cartItems[addedItem.id] === 0
-                ? styles.addedItem + " hide"
-                : styles.addedItem
+              styles.addedItem + (cartItems[addedItem.id] === 0 ? " hide" : "")
             }
           >
             <img
@@ -40,9 +39,9 @@ function Cart() {
             <div className={styles.addedItemInfo}>
               <h3>{addedItem.name}</h3>
               <div className={styles.addedItemPrice}>
-                {currency.symbol}
-                {Math.round(addedItem.price * currency.conversionRate * 100) /
-                  100}
+                {currencyFormat.format(
+                  addedItem.price * currency.conversionRate
+                )}
               </div>
               <div className={styles.addedItemQuantity}>
                 <button
@@ -71,8 +70,7 @@ function Cart() {
           <div className={styles.cartDescWrapper}>
             <div>
               {t("total")}
-              {currency.symbol}
-              {Math.round(totalPrice() * currency.conversionRate * 100) / 100}
+              {currencyFormat.format(totalPrice() * currency.conversionRate)}
             </div>
             <button
               className={styles.clearCartBtn}

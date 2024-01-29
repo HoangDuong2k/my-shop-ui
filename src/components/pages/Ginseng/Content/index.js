@@ -5,8 +5,14 @@ import { ShopContext } from "../../../../shop-context";
 import { useTranslation } from "react-i18next";
 
 function Content() {
-  const { currency, addToCart } = useContext(ShopContext);
+  const { currency, currencyFormat, addToCart, setShowSnackBar } =
+    useContext(ShopContext);
   const { t } = useTranslation();
+  function handleClickAdd(id) {
+    addToCart(id);
+    setShowSnackBar(true);
+    setTimeout(() => setShowSnackBar(false), 1000);
+  }
 
   return (
     <div className={styles.wrapper}>
@@ -21,12 +27,11 @@ function Content() {
           <div className={styles.itemInfo}>
             <p className={styles.itemName}>{item.name}</p>
             <p className={styles.itemPrice}>
-              {currency.symbol}
-              {Math.round(item.price * currency.conversionRate * 100) / 100}
+              {currencyFormat.format(item.price * currency.conversionRate)}
             </p>
             <button
               className={styles.addToCartBtn}
-              onClick={() => addToCart(item.id)}
+              onClick={() => handleClickAdd(item.id)}
             >
               {t("add to cart")}
             </button>

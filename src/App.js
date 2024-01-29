@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import Cosmetics from "./components/pages/Cosmetics/Cosmetics";
 import Houseware from "./components/pages/Houseware/Houseware";
 import Ginseng from "./components/pages/Ginseng/Ginseng";
+import SnackBar from "./components/SnackBar";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/houseware" element={<Houseware />} />
         <Route path="/ginseng" element={<Ginseng />} />
       </Routes>
+      <SnackBar />
     </div>
   );
 }

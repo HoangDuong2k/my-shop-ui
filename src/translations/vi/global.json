@@ -13,10 +13,6 @@
     }
   },
   "home": {
-    "banner": {
-      "title": "Hãy tạo nên phiên bản tốt hơn của ",
-      "span": "bạn!"
-    },
     "content": {
       "item1": "Mỹ phẩm",
       "item2": "Gia dụng",
@@ -25,19 +21,15 @@
     }
   },
   "all": {
-    "banner": "Tạo nên phong cách của riêng bạn",
     "header": "Tất cả sản phẩm"
   },
   "cosmetics": {
-    "banner": "Tạo nên phong cách của riêng bạn",
     "header": "Mỹ phẩm"
   },
   "houseware": {
-    "banner": "Tạo nên phong cách của riêng bạn",
     "header": "Đồ gia dụng"
   },
   "ginseng": {
-    "banner": "Tạo nên phong cách của riêng bạn",
     "header": "Sâm, nấm linh chi"
   },
   "add to cart": "Thêm vào giỏ hàng",
