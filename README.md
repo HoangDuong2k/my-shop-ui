@@ -90,3 +90,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 28-01-2024: Complete shop cart
 
 30-01-2024: Update banner, currency, currency format, products list
+
+01-02-2024: Create homepage slider, chatbot
