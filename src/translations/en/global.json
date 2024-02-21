@@ -33,5 +33,8 @@
     "header": "Ginseng"
   },
   "add to cart": "Add to cart",
-  "total": "Total: "
+  "total": "Total: ",
+  "chatbot": {
+    "needHelp": "What can I help you with?"
+  }
 }

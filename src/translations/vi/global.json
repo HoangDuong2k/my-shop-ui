@@ -33,5 +33,8 @@
     "header": "Sâm, nấm linh chi"
   },
   "add to cart": "Thêm vào giỏ hàng",
-  "total": "Tổng: "
+  "total": "Tổng: ",
+  "chatbot": {
+    "needHelp": "Tôi có thể giúp gì cho bạn?"
+  }
 }

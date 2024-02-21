@@ -92,3 +92,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 30-01-2024: Update banner, currency, currency format, products list
 
 01-02-2024: Create homepage slider, chatbot
+
+22-02-2024: Complete chatbot
