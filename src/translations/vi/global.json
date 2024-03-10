@@ -10,6 +10,11 @@
     "cart": {
       "status": "Giỏ hàng: ",
       "description": "Có vẻ như bạn chưa thêm bất cứ thứ gì vào giỏ hàng của mình"
+    },
+    "account": {
+      "status": "Bạn chưa đăng nhập tài khoản nào!",
+      "login": "Đăng nhập",
+      "signup": "Đăng ký"
     }
   },
   "home": {

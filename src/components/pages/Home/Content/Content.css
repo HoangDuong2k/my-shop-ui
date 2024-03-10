@@ -108,3 +108,14 @@
   top: 85%;
   left: 70%;
 }
+
+@media (max-width: 46.1875em) {
+  .homeContent2 .homeItemBtn {
+    top: 85%;
+    left: 10%;
+  }
+  .homeContent4 .homeItemBtn {
+    top: 85%;
+    left: 20%;
+  }
+}

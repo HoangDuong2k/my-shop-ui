@@ -1,4 +1,4 @@
-import styles from "./Content.module.css";
+import styles from "../../Content.module.css";
 import { PRODUCTS } from "../../../../products/Products";
 import { useContext } from "react";
 import { ShopContext } from "../../../../shop-context";

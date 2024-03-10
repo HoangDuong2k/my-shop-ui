@@ -1,8 +1,14 @@
 import styles from "./header.module.css";
-import { MdKeyboardArrowDown } from "react-icons/md";
+import {
+  MdKeyboardArrowDown,
+  MdMenu,
+  MdOutlineClose,
+  MdAccountCircle,
+} from "react-icons/md";
 import { BsCart3 } from "react-icons/bs";
 import Currency from "./Currency";
 import Cart from "./Cart";
+import Account from "./Account";
 import { useRef, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import Languege from "./Language";
@@ -19,10 +25,13 @@ function Header() {
   const [isOpenCurrencySelector, setIsOpenCurrencySelector] = useState(false);
   const [isOpenCartStatus, setIsOpenCartStatus] = useState(false);
   const [isOpenLangSelector, setIsOpenLangSelector] = useState(false);
+  const [isOpenAccount, setIsOpenAccount] = useState(false);
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
 
   const currencySelectorRef = useRef();
   const cartRef = useRef();
   const langRef = useRef();
+  const accountRef = useRef();
 
   useEffect(() => {
     const handleClick = (e) => {
@@ -30,6 +39,7 @@ function Header() {
         setIsOpenCurrencySelector(false);
       if (!cartRef.current.contains(e.target)) setIsOpenCartStatus(false);
       if (!langRef.current.contains(e.target)) setIsOpenLangSelector(false);
+      if (!accountRef.current.contains(e.target)) setIsOpenAccount(false);
     };
     window.addEventListener("click", handleClick);
     return () => {
@@ -38,7 +48,11 @@ function Header() {
   }, []);
 
   return (
-    <header className={styles.wrapper}>
+    <header
+      className={
+        !isOpenMenu ? styles.wrapper : styles.wrapper + " " + styles.isOpenMenu
+      }
+    >
       <Link to="/" className={styles.homePage}>
         Shopping Time
       </Link>
@@ -56,7 +70,11 @@ function Header() {
           </li>
         ))}
       </ul>
+
+      {/*--------------------- tool ---------------------*/}
+
       <div className={styles.tools}>
+        {/* --------- currency -------------- */}
         <div
           className={styles.currencySelector}
           onClick={() => setIsOpenCurrencySelector(!isOpenCurrencySelector)}
@@ -68,6 +86,8 @@ function Header() {
           </span>
         </div>
         {isOpenCurrencySelector && <Currency />}
+
+        {/* --------- cart -------------- */}
 
         <div className={styles.cart} ref={cartRef}>
           <div
@@ -81,16 +101,37 @@ function Header() {
           )}
           {isOpenCartStatus && <Cart />}
         </div>
-        <div className={styles.langSelector}>
-          <div
-            className={styles.currentLang}
-            onClick={() => setIsOpenLangSelector(!isOpenLangSelector)}
-            ref={langRef}
-          >
-            {i18n.language}
-          </div>
-          {isOpenLangSelector && <Languege />}
+
+        {/* --------- language -------------- */}
+
+        <div
+          className={styles.currentLang}
+          onClick={() => setIsOpenLangSelector(!isOpenLangSelector)}
+          ref={langRef}
+        >
+          {i18n.language}
         </div>
+        {isOpenLangSelector && <Languege />}
+
+        {/* --------- account -------------- */}
+
+        <div
+          className={styles.account}
+          onClick={() => setIsOpenAccount(!isOpenAccount)}
+          ref={accountRef}
+        >
+          <MdAccountCircle />
+        </div>
+        {isOpenAccount && <Account />}
+      </div>
+
+      {/* --------- MenuBtn -------------- */}
+
+      <div className={styles.closeMenuBtn} onClick={() => setIsOpenMenu(false)}>
+        <MdOutlineClose />
+      </div>
+      <div className={styles.menuBtn} onClick={() => setIsOpenMenu(true)}>
+        <MdMenu />
       </div>
     </header>
   );

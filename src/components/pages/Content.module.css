@@ -45,3 +45,21 @@
   background-color: #000;
   color: #fff;
 }
+
+@media (max-width: 64em) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 3rem;
+    gap: 6rem 2rem;
+  }
+}
+
+@media (max-width: 46.1875em) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 3rem;
+    gap: 6rem 2rem;
+  }
+}

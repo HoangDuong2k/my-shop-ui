@@ -10,6 +10,11 @@
     "cart": {
       "status": "My cart: ",
       "description": "Looks like you haven't added anything to your cart yet"
+    },
+    "account": {
+      "status": "You haven't log in!",
+      "login": "Log in",
+      "signup": "Sign up"
     }
   },
   "home": {

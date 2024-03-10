@@ -1,4 +1,4 @@
-import styles from "./Banner.module.css";
+import styles from "../../Banner.module.css";
 import bannerImg from "../../../../assets/images/all.jpg";
 import { useTranslation } from "react-i18next";
 
