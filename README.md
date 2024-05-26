@@ -96,3 +96,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 22-02-2024: Complete chatbot
 
 10-03-2024: Add account info, responsive
+
+14-03-2024: Add domain adaptlm.com
